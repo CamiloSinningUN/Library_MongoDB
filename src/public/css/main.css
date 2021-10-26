@@ -1,7 +1,26 @@
-.bg-custom1{
-    background-color: #1EC291;
+.bg-custom1 {
+  background-color: #f5f5f5;
+}
+
+.bg-custom2 {
+  background-color: #e0e0e0;
 }
 
 .sidebar-heading {
-    color: #137C5C;
+  color: #707070;
+}
+
+.shake:hover {
+  animation: pulse 0.5s;
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.05);
+	}
 }

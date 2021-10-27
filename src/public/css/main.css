@@ -24,3 +24,9 @@
 		transform: scale(1.05);
 	}
 }
+
+.delete_button {
+	color: white;
+	background-color: black;
+	border-radius: 50%;
+  }

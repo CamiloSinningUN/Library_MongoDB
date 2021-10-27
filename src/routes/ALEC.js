@@ -32,4 +32,21 @@ router.post('/ALEC/new_autor', async (req,res)=>{
     }
 });
 
+router.get('/ALEC/edit_autor/:id', async (req,res)=>{
+    const autor =  await Autor.findById(req.params.id).lean();
+    res.render('ALEC/edit_autor',{autor});
+});
+
+router.post('/ALEC/edit_autor/:id', async (req,res)=>{
+    const {nombre,apellido1,apellido2} = req.body;
+    await Autor.findByIdAndUpdate(req.params.id,{nombre,apellido1,apellido2});
+    res.redirect('/ALEC/autor');
+});
+
+router.get('/ALEC/delete_autor/:id', async (req,res)=>{
+    await Autor.findByIdAndDelete(req.params.id).lean();
+    res.redirect('/ALEC/autor');
+});
+
+
 module.exports = router;

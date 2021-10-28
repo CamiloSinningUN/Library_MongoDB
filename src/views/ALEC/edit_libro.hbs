@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center align-items-center h-100">
+    <div class="card rounded shadow w-auto">
+        <div class="card-body">
+            <div class="card-title pb-2">
+                <h1 class="display-1 text-center">Libro-Editar</h1>
+            </div>
+            <div class="card-text">
+                <form class="row row-cols-lg-auto g-3 align-items-center justify-content-center"
+                    action="/ALEC/edit_libro/{{libro._id}}" method="post">
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-text">Titulo</div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                                placeholder="100 años de soledad" name="titulo" value="{{libro.titulo}}" autofocus>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Editar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -27,6 +27,7 @@ app.use(methodOverride('_method'));
 //Routes
 app.use(require('./routes/index'));
 app.use(require('./routes/ALEC'));
+app.use(require('./routes/Usuario'));
 
 //Static Files
 app.use(express.static(path.join(__dirname,'public')));

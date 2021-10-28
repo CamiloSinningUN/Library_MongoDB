@@ -21,11 +21,13 @@ router.post('/ALEC/new_autor', async (req,res)=>{
         errors.push({text:'Por favor inserte el segundo apellido'})
     }
     if(errors.length>0){
+        const autores = await Autor.find().lean();
         res.render('ALEC/autor',{
             errors,
             nombre,
             apellido1,
-            apellido2
+            apellido2,
+            autores
         });
     }else{
         const newAutor = new Autor({nombre,apellido1,apellido2});
@@ -63,9 +65,11 @@ router.post('/ALEC/new_libro', async (req,res)=>{
         errors.push({text:'Por favor inserte un titulo'})
     }
     if(errors.length>0){
-        res.render('ALEC/libros',{
+        const libros = await Libro.find().lean();
+        res.render('ALEC/libro',{
             errors,
-            titulo
+            titulo,
+            libros
         });
     }else{
         const newLibro = new Libro({titulo});

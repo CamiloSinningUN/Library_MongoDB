@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center align-items-center h-100">
+    <div class="card rounded shadow w-auto">
+        <div class="card-body">
+            <div class="card-title pb-2">
+                <h1 class="display-1 text-center">Usuario-Editar</h1>
+            </div>
+            <div class="card-text">
+                <form class="row row-cols-lg-auto g-3 align-items-center justify-content-center"
+                    action="/usuario/edit_usuario/{{usuario._id}}" method="post">
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-text">RUT</div>
+                            <input type="number" class="form-control" id="inlineFormInputGroupUsername"
+                                placeholder="1234" name="RUT" value="{{usuario.RUT}}" autofocus>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-text">Nombre</div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                                placeholder="Gabriel" name="nombre" value="{{usuario.nombre}}" autofocus>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-text">Primer apellido</div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                                placeholder="García" name="apellido1" value="{{usuario.apellido1}}">
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-text">Segundo apellido</div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                                placeholder="Médici" name="apellido2" value="{{usuario.apellido2}}">
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Editar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

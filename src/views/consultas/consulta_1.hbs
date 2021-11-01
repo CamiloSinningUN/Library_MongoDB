@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-center flex-column  m-5 mt-4">
+    <div class="card rounded shadow mt-4">
+        <div class="card-header">
+              <h5 class="text-center">Listado de copias de libros en poseción</h5>
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Autor</th>
+                            <th scope="col">Libro</th>
+                            <th scope="col">Edición</th>
+                            <th scope="col">Copia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each con1}}
+                        <tr>
+                            <th scope="row">{{@index}}</th>
+                            <td>{{nombreCompleto}}</td>
+                            <td>{{libro}}</td>
+                            <td>{{edicion}}</td>
+                            <td>{{copia}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

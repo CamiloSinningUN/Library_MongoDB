@@ -25,7 +25,7 @@ router.post('/usuario/new_usuario', async (req,res)=>{
         const usuarios = await Usuario.find().lean();
         res.render('usuario/show',{
             errors,
-            RUT,
+            RUT,                   
             nombre,
             apellido1,
             apellido2,

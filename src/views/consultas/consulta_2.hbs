@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center flex-column  m-5 mt-4">
+    {{#each errors }}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{text}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/each}}
+    <div class="card rounded shadow mt-4">
+        <div class="card-body">
+            <div class="card-text">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th colspan="2" scope="colgroup">Libro</th>
+                            <th colspan="2" scope="colcolgroup">Lo prestó</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Libro</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">RUT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each con2}}
+                        <tr>
+                            <th scope="row">{{@index}}</th>
+                            <td>{{titulo}}</td>
+                            <td>{{nombreCompleto}}</td>
+                            <td>{{RUT}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

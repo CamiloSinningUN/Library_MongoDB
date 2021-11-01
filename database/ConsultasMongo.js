@@ -35,7 +35,7 @@ db.getCollection("copia").aggregate([
 '_id':0,
 'nombreCompleto':1,
 'libro':'$cod.titulo',
-'edicion':'$isbn',
+'edicion':'$ISBN',
 'copia':'$numero'
 }
 }
@@ -44,49 +44,53 @@ db.getCollection("copia").aggregate([
 //Un listado de los libros prestados por un usuario.
 
 db.usuario.aggregate([
-{
-'$lookup':{
-  from: 'prestamo',
-  localField:'RUT',
-  foreignField:'RUT',
-  as: 'num'
-}
-},{
-
-'$unwind':'$num'
-},{
-'$lookup':{
-  from: 'copia',
-  localField:'num.ISBN',
-  foreignField:'ISBN',
-  as: 'copia'
-}
-},{
-'$unwind':'$copia'
-},{
-'$lookup':{
-  from: 'edicion',
-  localField:'copia.ISBN',
-  foreignField:'ISBN',
-  as: 'edicion'
-}
-},{
-'$unwind':'$edicion'
-},{
-'$addFields':{
-'nombreCompleto':{
-'$concat':[
-'$nombre',' ','$apellido1',' ','$apellido2'
-]
-}
-}
-},{
-
-'$project':{
-'_id':0,
-'nombreCompleto':1,
-'RUT':'$RUT',
-'titulo':'$edicion.titulo'
-}
-}
-]).pretty()
+  {
+  '$match':{
+  'RUT':2836
+  }
+  },{
+  '$lookup':{
+    from: 'prestamo',
+    localField:'RUT',
+    foreignField:'RUT',
+    as: 'num'
+  }
+  },{
+  
+  '$unwind':'$num'
+  },{
+  '$lookup':{
+    from: 'copia',
+    localField:'num.ISBN',
+    foreignField:'ISBN',
+    as: 'copia'
+  }
+  },{
+  '$unwind':'$copia'
+  },{
+  '$lookup':{
+    from: 'edicion',
+    localField:'copia.ISBN',
+    foreignField:'ISBN',
+    as: 'edicion'
+  }
+  },{
+  '$unwind':'$edicion'
+  },{
+  '$addFields':{
+  'nombreCompleto':{
+  '$concat':[
+  '$nombre',' ','$apellido1',' ','$apellido2'
+  ]
+  }
+  }
+  },{
+  
+  '$project':{
+  '_id':0,
+  'nombreCompleto':1,
+  'RUT':'$RUT',
+  'titulo':'$edicion.titulo'
+  }
+  }
+  ]).pretty()

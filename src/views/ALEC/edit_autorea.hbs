@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center flex-column  m-5 mt-4">
+    <div class="card rounded shadow w-auto">
+        <div class="card-body">
+            <div class="card-title pb-2">
+                <h1 class="display-1 text-center">Autorea-Editar</h1>
+            </div>
+            <div class="card-text">
+                <form class="row row-cols-lg-auto g-3 align-items-center justify-content-center"
+                    action="/ALEC/edit_autorea/{{autorea._id}}" method="post">
+
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-text">Autor</div>
+                            <select  class="form-control" name="autor">
+                                {{#each autores}}
+                                <option value="{{_id}}">{{nombre}} {{apellido1}} {{apellido2}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-text">Libro</div>
+                            <select name="libro" class="form-control">
+                                {{#each libros}}
+                                <option value="{{_id}}">{{titulo}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Editar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

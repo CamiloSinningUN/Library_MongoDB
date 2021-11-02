@@ -8,23 +8,37 @@
     <div class="card rounded shadow w-auto">
         <div class="card-body">
             <div class="card-title pb-2">
-                <h1 class="display-1 text-center">Libro</h1>
+                <h1 class="display-1 text-center">Edicion</h1>
             </div>
             <div class="card-text">
                 <form class="row row-cols-lg-auto g-3 align-items-center justify-content-center"
-                    action="/ALEC/new_libro" method="post">
+                    action="/ALEC/new_edicion" method="post">
                     <div class="col-12">
                         <div class="input-group">
-                            <div class="input-group-text">Título</div>
-                            <input type="text" class="form-control" id="inlineFormInputGroupUsername"
-                                placeholder="100 años de soledad" name="titulo" autofocus>
+                            <div class="input-group-text">ISBN</div>
+                            <input type="number" class="form-control" id="inlineFormInputGroupUsername"
+                                placeholder="1234" name="ISBN" autofocus>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="input-group">
-                            <div class="input-group-text">ISBN</div>
+                            <div class="input-group-text">Titulo</div>
                             <input type="text" class="form-control" id="inlineFormInputGroupUsername"
-                                placeholder="1234" name="ISBN" autofocus>
+                                placeholder="Los tres tigres" name="titulo" autofocus>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-text">Año</div>
+                            <input type="number" min="1900" max="2022" step="1" class="form-control" id="inlineFormInputGroupUsername"
+                                placeholder="2021" name="year" autofocus>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-text">Idioma</div>
+                            <input type="text"  class="form-control" id="inlineFormInputGroupUsername"
+                                placeholder="Español" name="idioma" autofocus>
                         </div>
                     </div>
 
@@ -43,17 +57,21 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Libro</th>
                             <th scope="col">ISBN</th>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Año</th>
+                            <th scope="col">Idioma</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {{#each libros}}
+                        {{#each edicion}}
                         <tr>
                             <th scope="row">{{@index}}</th>
-                            <td>{{titulo}}</td>
                             <td>{{ISBN}}</td>
-                            <td><a href="/ALEC/delete_libro/{{_id}}">
+                            <td>{{titulo}}</td>
+                            <td>{{year}}</td>
+                            <td>{{idioma}}</td>
+                            <td><a href="/ALEC/delete_edicion/{{_id}}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="bg-dark"
                                         class="bi bi-trash shake" viewBox="0 0 16 16">
                                         <path
@@ -62,7 +80,7 @@
                                             d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
                                     </svg>
                                 </a></td>
-                            <td><a href="/ALEC/edit_libro/{{_id}}">
+                            <td><a href="/ALEC/edit_edicion/{{_id}}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="bg-dark"
                                         class="bi bi-pencil" viewBox="0 0 16 16">
                                         <path

@@ -1,0 +1,55 @@
+<div class="d-flex justify-content-center align-items-center h-100">
+    <div class="card rounded shadow w-auto">
+        <div class="card-body">
+            <div class="card-title pb-2">
+                <h1 class="display-1 text-center">Prestamo-Editar</h1>
+            </div>
+            <div class="card-text">
+                <form class="row row-cols-lg-auto g-3 align-items-center justify-content-center"
+                    action="/prestamo/edit_prestamo/{{prestamo._id}}" method="post">
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-text">RUT</div>
+                            <input type="number" class="form-control" id="inlineFormInputGroupUsername"
+                                placeholder="1234" name="RUT" value="{{prestamo.RUT}}" autofocus>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-text">numero</div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                                placeholder="1234" name="numero" value="{{prestamo.numero}}" autofocus>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-text">ISBN</div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                                placeholder="1234" name="ISBN" value="{{prestamo.ISBN}}">
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-text">Fecha_Prestamo</div>
+                            <input type="date" class="form-control" id="inlineFormInputGroupUsername"
+                                 name="Fecha_Prestamo" value="{{prestamo.Fecha_Prestamo}}">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-text">Fecha_Devolucion</div>
+                            <input type="date" class="form-control" id="inlineFormInputGroupUsername"
+                                 name="Fecha_Devolucion" value="{{prestamo.Fecha_Devolucion}}">
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Editar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

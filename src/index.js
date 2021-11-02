@@ -28,6 +28,7 @@ app.use(methodOverride('_method'));
 app.use(require('./routes/index'));
 app.use(require('./routes/ALEC'));
 app.use(require('./routes/Usuario'));
+app.use(require('./routes/prestamo'));
 app.use(require('./routes/Consulta'));
 
 //Static Files

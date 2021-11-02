@@ -46,18 +46,18 @@ db.autorea.insert({"titulo":"El manuscrito","nombre":"Sergio","apellido1":"Garci
 db.autorea.insert({"titulo":"Mi viaje sin ti","nombre":"Marta","apellido1":"Jimenez","apellido2":"Mejia"})
 
 // insertando documentos (registros) en la colección (tabla) Libro
-db.libro.insert({"titulo":"La bella y la bestia"})
-db.libro.insert({"titulo":"Las horas distantes"})
-db.libro.insert({"titulo":"Boulevard"})
-db.libro.insert({"titulo":"El manuscrito"})
-db.libro.insert({"titulo":"Mi viaje sin ti"})
+db.libro.insert({"titulo":"La bella y la bestia","ISBN":5756584898884})
+db.libro.insert({"titulo":"Las horas distantes","ISBN":5756584898884})
+db.libro.insert({"titulo":"Boulevard","ISBN":5756584898884})
+db.libro.insert({"titulo":"El manuscrito","ISBN":5756584898884})
+db.libro.insert({"titulo":"Mi viaje sin ti","ISBN":5756584898884})
 
 // insertando documentos (registros) en la colección (tabla) edicion
-db.edicion.insert({"ISBN":9852963072538,"titulo":"La bella y la bestia","año":2001,"idioma":"español"})
-db.edicion.insert({"ISBN":9639726406192,"titulo":"Las horas distantes","año":2013,"idioma":"español"})
-db.edicion.insert({"ISBN":9439295392026,"titulo":"Boulevard","año":2015,"idioma":"ingles"})
-db.edicion.insert({"ISBN":9582036492640,"titulo":"El manuscrito","año":2005,"idioma":"español"})
-db.edicion.insert({"ISBN":9730269351847,"titulo":"Mi viaje sin ti","año":2017,"idioma":"español"})
+db.edicion.insert({"ISBN":9852963072538,"titulo":"La bella y la bestia","year":2001,"idioma":"español"})
+db.edicion.insert({"ISBN":9639726406192,"titulo":"Las horas distantes","year":2013,"idioma":"español"})
+db.edicion.insert({"ISBN":9439295392026,"titulo":"Boulevard","year":2015,"idioma":"ingles"})
+db.edicion.insert({"ISBN":9582036492640,"titulo":"El manuscrito","year":2005,"idioma":"español"})
+db.edicion.insert({"ISBN":9730269351847,"titulo":"Mi viaje sin ti","year":2017,"idioma":"español"})
 
 // insertando documentos (registros) en la colección (tabla) copia
 db.copia.insert({"ISBN":9852963072538,"numero":23})

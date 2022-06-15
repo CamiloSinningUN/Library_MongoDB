@@ -41,7 +41,7 @@ Open the project with the preferred code editor.
 * **Sthephany Rojas** - *Database* - [sthephanyr15](https://github.com/sthephanyr15)
 * **Jorge Salazar**
 
-See the list of all [contributors](https://github.com/CamiloSinningUN/Bienestar_familiar/contributors) who have participated in this project.
+See the list of all [contributors](https://github.com/CamiloSinningUN/Library_MongoDB/contributors) who have participated in this project.
 
 
  

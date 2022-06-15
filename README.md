@@ -1,44 +1,47 @@
-# Biblioteca_MongoDB
+# Library_MongoDB
 
-Pagina web la cual administra una base de datos en MongDB que continene la información de un sistema inspirado en un biblioteca.
+Web page which manages a database in MongDB that contains the information of a system inspired by a library.
 
-## Comenzando 🚀
+## Preview 
 
-Puede obtener una copia del proyecto simplemente descargandolo desde este repositorio.
+![image](https://user-images.githubusercontent.com/61607058/173726301-edd51b7f-0d4a-469a-b84e-f470b54533f3.png)
 
-Mira **Despliegue** para conocer como desplegar el proyecto.
+## Starting 🚀
 
-### Pre-requisitos 📋
+You can get a copy of the project simply by downloading it from this repository.
 
-*	Tener el servicio de MongoDB en ejecución.
-*	Crear una base de datos llamada biblioteca.
-*	Ejecutar el códgio que se encuentra en la carpeta database del proyecto en la base de datos.
+See **Deployment** to learn how to deploy the project.
 
-### Instalación 🔧
+### Pre-requisites 📋
 
-Para la correcta instalación de los recursos descargar las librerias usando node.js a través de la consola.
+* Have the MongoDB service running.
+* Create a database called library.
+* Execute the code found in the database folder of the project in the database.
 
-## Despliegue 📦
+### Installation 🔧
 
-Abrir el proyecto con el editor de código de preferencia.
+For the correct installation of the resources, download the libraries using node.js through the console.
 
-## Construido con 🛠️
+## Deployment 📦
+
+Open the project with the preferred code editor.
+
+## Built with 🛠️
 
 * Visual Studio Code - IDE
 * Node.js
 * Express.js
 * mongoose
-* handlebars
+* handle bars
 
-## Autores ✒️
+## Authors ✒️
 
-* **Camilo Sinning** - *Programación Front-End* - [CamiloSinningUN](https://github.com/CamiloSinningUN)
-* **Dilan Triana** - *Programación Back-End* - [Tdilan395](https://github.com/Tdilan395)
-* **Sthephany Rojas** - *Base de datos* - [sthephanyr15](https://github.com/sthephanyr15)
+* **Camilo Sinning** - *Front-End Programming* - [CamiloSinningUN](https://github.com/CamiloSinningUN)
+* **Dilan Triana** - *Back-End Programming* - [Tdilan395](https://github.com/Tdilan395)
+* **Sthephany Rojas** - *Database* - [sthephanyr15](https://github.com/sthephanyr15)
 * **Jorge Salazar**
 
-Mirar la lista de todos los [contribuyentes](https://github.com/CamiloSinningUN/Bienestar_familiar/contributors) quíenes han participado en este proyecto. 
-
+See the list of all [contributors](https://github.com/CamiloSinningUN/Bienestar_familiar/contributors) who have participated in this project.
 
 
  
